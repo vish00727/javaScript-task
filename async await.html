@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function vishal() {
+        let mumbai = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("27 degree");
+          }, 2000);
+        });
+        let pune = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("22 degree");
+          }, 8000);
+        });
+        // mumbai.then(alert)
+        // pune.then(alert)
+
+        let mum = await mumbai;
+        let pun = await pune;
+        return [mum, pun];
+      }
+      console.log("namskar public");
+      let q = vishal();
+      console.log(q);
+    </script>
+  </body>
+</html>

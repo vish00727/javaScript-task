@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table >
+        <tr>
+            <th>Check</th>
+            <th>details</th>
+            <th>details</th>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" id="c1"></td>
+            <td><input type="text" id="t1" disabled></td>
+            <td><p id="p1" >Active</p></td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" id="c2"></td>
+            <td><input type="text" id="t2" disabled></td>
+            <td><p id="p2"> Active</p></td>
+        </tr>
+        
+
+    </table>
+
+
+    <script>
+
+        var a= document.getElementById('c1');
+        var b= document.getElementById('t1');
+        var c= document.getElementById('p1');
+
+        var x= document.getElementById('c2');
+        var y= document.getElementById('t2');
+        var z= document.getElementById('p2');
+
+        a.addEventListener("click", function(){
+            
+            if(a.checked){
+                c.style.color="orange"
+                b.disabled = false;
+            }
+            else{
+                b.disabled= true;
+                c.style.color=""
+
+            }
+
+
+        })
+
+        x.addEventListener("click", function(){
+            
+            if(x.checked ){
+              y.disabled = false;
+             }
+            else{
+                y.disabled= true;
+                
+            }
+            
+        })
+        
+        </script>
+</body>
+</html>
